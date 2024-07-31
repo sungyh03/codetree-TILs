@@ -10,16 +10,13 @@ for _,x,y in infomation:
     if infection[x-1] == 1 and infection[y-1] == 1:
         infected_handshake_cnt[x-1] += 1
         infected_handshake_cnt[y-1] += 1
-        continue
     elif infection[x-1] == 1 and infection[y-1] == 0:
         if infected_handshake_cnt[x-1] < K:
             infection[y-1] = 1
         infected_handshake_cnt[x-1] += 1
-        continue
     elif infection[y-1] == 1 and infection[x-1] == 0:
         if infected_handshake_cnt[y-1] < K:
             infection[x-1] = 1
-        infected_handshake_cnt[x-1] += 1
-        continue
+        infected_handshake_cnt[y-1] += 1
 for i in infection:
     print(i,end='')
