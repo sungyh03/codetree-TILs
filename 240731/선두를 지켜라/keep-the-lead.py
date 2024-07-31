@@ -22,4 +22,6 @@ for i in range(1,len(A_position)):
         is_forward = 'B'
     else:
         is_forward = 0
+if A_position[1] == B_position[1]:
+    cnt -= 1
 print(cnt)
