@@ -10,18 +10,14 @@ for _ in range(M):
     for _ in range(t):
         B_position.append(B_position[-1] + v)
 cnt = 0
-is_forward = -1
+is_forward = 0
 for i in range(1,len(A_position)):
     if A_position[i] > B_position[i]:
-        if is_forward == 'B' or is_forward == 0:
+        if is_forward == 'B' :
             cnt += 1
         is_forward = 'A'
     elif A_position[i] < B_position[i]:
-        if is_forward == 'A' or is_forward == 0:
+        if is_forward == 'A' :
             cnt += 1
         is_forward = 'B'
-    else:
-        is_forward = 0
-if A_position[1] == B_position[1]:
-    cnt -= 1
 print(cnt)
