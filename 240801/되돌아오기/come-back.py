@@ -14,8 +14,10 @@ for _ in range(N):
         elapsed_t += 1
         if x == 0 and y == 0:
             arrived = True
-            answer = elapsed_t
-if arrived:
-    print(answer)
+            break
+    if arrived:
+        break
+if elapsed_t != 0:
+    print(elapsed_t)
 else:
     print(-1)
