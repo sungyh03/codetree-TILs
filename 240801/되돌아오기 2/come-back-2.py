@@ -9,7 +9,7 @@ for i in order_list:
         move_dir = (move_dir+3)%4
     elif i == 'R':
         move_dir = (move_dir+1)%4
-    elif:
+    elif i == 'F':
         x,y = x+dxs[move_dir],y+dys[move_dir]
     elapsed_time += 1
     if x == 0 and y == 0:
